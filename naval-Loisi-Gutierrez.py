@@ -1,6 +1,19 @@
 #tablero y esconder barcos
 
-def show_board(Barco, Nobarco):
+def tiro():
+
+se = "s"
+    while se == "s"
+    tiro = input("Por favor, ingresa tu tiro")
+    tiro = int(tiro)
+    if tiro < 0 or tiro > 99:
+        print("Numero incorrecto, proba de nuevo")
+        else:
+            ok ="y"
+            break
+        return tiro
+
+def show_board(Barco, Erraste):
     print("    0 1 2 3 4 5 6 7 8 9")
 
     place = 0
@@ -8,7 +21,7 @@ def show_board(Barco, Nobarco):
         row = ""
         for y in range(10):
             ch = "_ "
-            if place in Nobarco:
+            if place in Erraste:
                 ch = "x "
             elif place in Barco:
                 ch = "o "
@@ -17,5 +30,5 @@ def show_board(Barco, Nobarco):
         print(x, " ", row)
 
 Barco = [21]
-Nobarco = [20, 22, 23, 12, 13]
-show_board(Barco, Nobarco)
+Erraste = [20, 22, 23, 12, 13]
+show_board(Barco, Erraste)
