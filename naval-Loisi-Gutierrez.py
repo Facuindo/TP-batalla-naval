@@ -1,17 +1,25 @@
 #tablero y esconder barcos
 
+Barco = [21]
+Erraste = [20, 22, 23, 12, 13]
+
 def tiro():
 
-se = "s"
-    while se == "s"
-    tiro = input("Por favor, ingresa tu tiro")
-    tiro = int(tiro)
-    if tiro < 0 or tiro > 99:
-        print("Numero incorrecto, proba de nuevo")
-        else:
-            ok ="y"
-            break
-        return tiro
+    while True:
+        tiro: int =  input("Por favor, ingresa tu tiro: ")
+        if not tiro.isdigit() or type(int(tiro)) != int: # Si tiro no es un número
+            print("Ingrese un número entero")
+            continue
+
+        tiro = int(tiro)
+  
+        if tiro < 0 or tiro > 99: # si tiro excede el límite
+            print("Numero incorrecto, proba de nuevo")
+            continue
+
+        break
+
+    return tiro
 
 def show_board(Barco, Erraste):
     print("    0 1 2 3 4 5 6 7 8 9")
@@ -28,7 +36,8 @@ def show_board(Barco, Erraste):
             row += ch
             place += 1
         print(x, " ", row)
+    tiro()
 
-Barco = [21]
-Erraste = [20, 22, 23, 12, 13]
-show_board(Barco, Erraste)
+
+
+show_board (Barco, Erraste)
