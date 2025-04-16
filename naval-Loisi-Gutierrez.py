@@ -2,10 +2,6 @@ git add naval-Loisi-Gutierrez.py
 
 #tablero y esconder barcos
 
-def show_board(Barco, Nobarco, completo):
-    print("  0 1 2 3 4 5 6 7 8 9")
-Barco = [21]
-Erraste = [20, 22, 23, 12, 13]
 
 def tiro():
 
@@ -32,22 +28,15 @@ def show_board(Barco, Erraste):
     for x in range(10):
         row = ""
         for y in range(10):
-            ch = "  "
-            if place in Nobarco:
-                ch = " x"
             ch = "_ "
             if place in Erraste:
                 ch = "x "
             elif place in Barco:
-                ch = " o"
-            elif place in completo:
-                ch = " 0"
                 ch = "o "
             row += ch
             place += 1
         print(x, " ", row)
     tiro()
-
 
 Barco = [21, 22]
 Nobarco = [20, 24, 12, 13]
@@ -119,4 +108,5 @@ while aciertos < CANTIDAD_BARCOS:
 mostrar_tablero(disparos)
 print(f"Juego terminado en {intentos} disparos.")
 
- 
+
+
